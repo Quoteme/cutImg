@@ -1,4 +1,4 @@
-# cutImg
+# cutImg.js
 A minimalist javascript library for cutting images into smaller rectangular sections / copying them
 
 use like this:

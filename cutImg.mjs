@@ -3,7 +3,7 @@
 // AUTHOR: Luca Leon Happel
 // DATE: 19.10.2019
 
-export {
+export default{
 	cut
 }
 

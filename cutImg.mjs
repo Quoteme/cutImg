@@ -7,7 +7,7 @@ export default{
 	cut
 }
 
-cc = document.createElement("canvas");
+let cc = document.createElement("canvas");
 // make this canvas invisible, so it does not distract the user
 cc.style.display = "none";
 

@@ -12,7 +12,7 @@ cc = document.createElement("canvas");
 cc.style.display = "none";
 
 // this function takes in an image, then cuts it into a portion of the previous image and returns a new image
-cut = (image, x, y, width, height) => {
+function cut(image, x, y, width, height){
 	cc.width = width;
 	cc.height = height;
 	cc.getContext("2d").drawImage(image, -1 * x, -1 * y);

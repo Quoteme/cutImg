@@ -1,7 +1,21 @@
 # cutImg.js
 A minimalist javascript library for cutting images into smaller rectangular sections / copying them
 
-use like this:
+| Command | Effect |
+|---------|--------|
+| `cut(img, x, y, width, height)` | returns a cut version of the previous image |
+| `split(img, tileWidth, tileHeight)` | returns a tilemap of the image based on the tilesize entered |
+
+### new style
+```javascript
+	import * as CUTIMG from 'lib/cutImg/cutImg.mjs';
+
+	originalImage = new Image();
+	originalImage.src = "url/to/image.png";
+	newImage = CUTIMG.cut(originalImage, 100, 200, 450, 600);
+```
+
+### old style
 ```javascript
 originalImage = new Image();
 originalImage.src = "url/to/image.png";

@@ -4,7 +4,8 @@
 // DATE: 19.10.2019
 
 export{
-	cut
+	cut,
+	split
 }
 
 let cc = document.createElement("canvas");

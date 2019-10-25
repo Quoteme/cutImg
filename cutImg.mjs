@@ -28,7 +28,7 @@ function split(image, tileWidth, tileHeight){
 		.fill(0)
 		.map((a,y) => new Array(Math.floor(image.width/tileWidth))
 			.fill(0)
-			.map(x => cut(
+			.map((b,x) => cut(
 				image,
 				x*tileWidth,
 				y*tileHeight,

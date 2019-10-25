@@ -5,20 +5,22 @@
 
 export{
 	cut,
-	split
+	split,
+	join
 }
 
-let cc = document.createElement("canvas");
-// make this canvas invisible, so it does not distract the user
-cc.style.display = "none";
+let c = document.createElement("canvas");
+c.style.display = "none";
+
+let ctx = c.getContext("2d")
 
 // cut :: Image -> Float -> Float -> Float -> Float -> Image
 function cut(image, x, y, width, height){
-	cc.width = width;
-	cc.height = height;
-	cc.getContext("2d").drawImage(image, -1 * x, -1 * y);
+	c.width = width;
+	c.height = height;
+	ctx.drawImage(image, -1 * x, -1 * y);
 	let out = new Image();
-	out.src = cc.toDataURL("image/png");
+	out.src = c.toDataURL("image/png");
 	return out;
 }
 
@@ -35,4 +37,15 @@ function split(image, tileWidth, tileHeight){
 				tileWidth,
 				tileHeight
 			)))
+}
+
+// join :: Img -> Img -> Int -> Int -> Img
+function join(a,b,x,y){
+	c.width = a.width + b.width + Math.abs( x-a.width );
+	c.height = a.height + b.height + Math.abs( y-a.height );
+	ctx.drawImage(a,0,0);
+	ctx.drawImage(b,x,y);
+	let out = new Image();
+		out.src = c.toDataURL("image/png");
+	return out;
 }

@@ -6,8 +6,10 @@ A minimalist javascript library for cutting images into smaller rectangular sect
 | `cut(img, x, y, width, height)` | returns a cut version of the previous image |
 | `split(img, tileWidth, tileHeight)` | returns a tilemap of the image based on the tilesize entered |
 
-### new style
+### as a module module
 ```javascript
+	// this file must be loaded as a module:
+	// <script src="path/to/cutImg.mjs" type="module">
 	import * as CUTIMG from 'lib/cutImg/cutImg.mjs';
 
 	originalImage = new Image();
@@ -15,7 +17,14 @@ A minimalist javascript library for cutting images into smaller rectangular sect
 	newImage = CUTIMG.cut(originalImage, 100, 200, 450, 600);
 ```
 
-### old style
+### as a script
+```html
+<head>
+	<!-- [...] -->
+	<script src="path/to/cutImg.js">
+	<!-- [...] -->
+<head>
+```
 ```javascript
 originalImage = new Image();
 originalImage.src = "url/to/image.png";

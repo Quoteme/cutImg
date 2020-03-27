@@ -9,7 +9,7 @@ A minimalist javascript library for cutting images into smaller rectangular sect
 ### as a module module
 ```javascript
 	// this file must be loaded as a module:
-	// <script src="path/to/cutImg.mjs" type="module">
+	// <script src="path/to/cutImg.mjs" type="module"></script>
 	import * as CUTIMG from 'lib/cutImg/cutImg.mjs';
 
 	originalImage = new Image();
@@ -21,9 +21,9 @@ A minimalist javascript library for cutting images into smaller rectangular sect
 ```html
 <head>
 	<!-- [...] -->
-	<script src="path/to/cutImg.js">
+	<script src="path/to/cutImg.js"></script>
 	<!-- [...] -->
-<head>
+</head>
 ```
 ```javascript
 originalImage = new Image();

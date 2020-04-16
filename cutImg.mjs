@@ -52,6 +52,7 @@ export function join(a,b,x,y){
 export function mirror(image, x=true,y=false){
 	c.width = image.width;
 	c.height = image.height;
+	ctx.translate(c.width, 0);
 	ctx.scale(
 		x?-1:1,
 		y?-1:1,

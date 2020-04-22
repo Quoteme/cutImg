@@ -62,3 +62,7 @@ export function mirror(image, x=true,y=false){
 		out.src = c.toDataURL("image/png");
 	return out;
 }
+
+// wait for images being loaded using `await`
+// load :: Img -> Promise
+export const load = async img => new Promise(resolve => img.onload = resolve(img))
